@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MediumMono">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="SmallMono">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="Title">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="Heading">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="Medium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="ButtonText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="Statistics">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

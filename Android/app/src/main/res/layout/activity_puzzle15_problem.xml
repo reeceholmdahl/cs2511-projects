@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/puzzle15_bg"
+    tools:context=".activities.Puzzle15ProblemIntro">
+
+    <TextView
+        android:id="@+id/puzzle15Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/puzzle15_title"
+        android:textAppearance="@style/Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/puzzle15Intro"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/puzzle_intro"
+        android:textAppearance="@style/Heading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/puzzle15Title" />
+
+    <Button
+        android:id="@+id/puzzle15StartBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="@color/puzzle15_btn"
+        android:onClick="beginProblem"
+        android:text="@string/puzzle15_start_btn"
+        android:textAppearance="@style/ButtonText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/puzzle15FinalState" />
+
+    <TextView
+        android:id="@+id/puzzle15Message"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/puzzle_message"
+        android:textAppearance="@style/Heading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/puzzle15Intro" />
+
+    <TextView
+        android:id="@+id/puzzle15FinalState"
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/final_state"
+        android:gravity="center"
+        android:text="@string/puzzle15_goal_state"
+        android:textAppearance="@style/MediumMono"
+        app:layout_constraintBottom_toBottomOf="@+id/puzzle15Message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/puzzle15Message" />
+
+    <TextView
+        android:id="@+id/puzzle15InitialState"
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/initial_state"
+        android:gravity="center"
+        android:text="@string/puzzle15_initial_state"
+        android:textAppearance="@style/MediumMono"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/puzzle15Intro"
+        app:layout_constraintTop_toTopOf="@+id/puzzle15Intro" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

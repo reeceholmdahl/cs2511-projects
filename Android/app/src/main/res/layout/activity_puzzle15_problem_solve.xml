@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/puzzle15_bg"
+    tools:context=".activities.Puzzle15ProblemSolve">
+
+    <TextView
+        android:id="@+id/puzzle15GoalState"
+        android:layout_width="160sp"
+        android:layout_height="160sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/final_state"
+        android:gravity="center"
+        android:text="@string/puzzle15_goal_state"
+        android:textAppearance="@style/SmallMono"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/puzzle15CurrentState"
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/initial_state"
+        android:gravity="center"
+        android:text="@string/puzzle15_initial_state"
+        android:textAppearance="@style/MediumMono"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/puzzle15MovesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/moves_label"
+        android:textAppearance="@style/Heading"
+        app:layout_constraintEnd_toEndOf="@+id/puzzle15GoalState"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toEndOf="@+id/puzzle15MoveCount"
+        app:layout_constraintTop_toBottomOf="@+id/puzzle15GoalState" />
+
+    <TextView
+        android:id="@+id/puzzle15MoveCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="50dp"
+        android:height="30dp"
+        android:background="@drawable/moves_count"
+        android:gravity="center"
+        android:text="0"
+        android:textAppearance="@style/MediumMono"
+        app:layout_constraintBottom_toBottomOf="@+id/puzzle15MovesLabel"
+        app:layout_constraintStart_toStartOf="@+id/puzzle15GoalState"
+        app:layout_constraintTop_toTopOf="@+id/puzzle15MovesLabel" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/puzzle15MoveButtons"
+        android:layout_width="271dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/puzzle15CurrentState"
+        app:layout_constraintTop_toBottomOf="@+id/puzzle15CurrentState"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/puzzle15SlideTile1"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="slideTile1"
+            android:text="@string/slideTile1"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/puzzle15SlideTile2"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="slideTile2"
+            android:text="@string/slideTile2"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintBottom_toBottomOf="@+id/puzzle15SlideTile1"
+            app:layout_constraintEnd_toStartOf="@+id/puzzle15SlideTile3"
+            app:layout_constraintStart_toEndOf="@+id/puzzle15SlideTile1" />
+
+        <Button
+            android:id="@+id/puzzle15SlideTile3"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="slideTile3"
+            android:text="@string/slideTile3"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintBottom_toBottomOf="@+id/puzzle15SlideTile2"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/puzzle15SlideTile4"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="slideTile4"
+            android:text="@string/slideTile4"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puzzle15SlideTile1" />
+
+        <Button
+            android:id="@+id/puzzle15SlideTile5"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="slideTile5"
+            android:text="@string/slideTile5"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintBottom_toBottomOf="@+id/puzzle15SlideTile4"
+            app:layout_constraintEnd_toStartOf="@+id/puzzle15SlideTile6"
+            app:layout_constraintStart_toEndOf="@+id/puzzle15SlideTile4" />
+
+        <Button
+            android:id="@+id/puzzle15SlideTile6"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="slideTile6"
+            android:text="@string/slideTile6"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintBottom_toBottomOf="@+id/puzzle15SlideTile5"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/puzzle15SlideTile7"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="slideTile7"
+            android:text="@string/slideTile7"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puzzle15SlideTile4" />
+
+        <Button
+            android:id="@+id/puzzle15SlideTile8"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="slideTile8"
+            android:text="@string/slideTile8"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintBottom_toBottomOf="@+id/puzzle15SlideTile7"
+            app:layout_constraintEnd_toStartOf="@+id/puzzle15SlideTile9"
+            app:layout_constraintStart_toEndOf="@+id/puzzle15SlideTile7" />
+
+        <Button
+            android:id="@+id/puzzle15SlideTile9"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="slideTile9"
+            android:text="@string/slideTile9"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintBottom_toBottomOf="@+id/puzzle15SlideTile8"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/puzzle15SlideTile10"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="slideTile10"
+            android:text="@string/slideTile10"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puzzle15SlideTile7" />
+
+        <Button
+            android:id="@+id/puzzle15SlideTile11"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="slideTile11"
+            android:text="@string/slideTile11"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintBottom_toBottomOf="@+id/puzzle15SlideTile10"
+            app:layout_constraintEnd_toStartOf="@+id/puzzle15SlideTile12"
+            app:layout_constraintStart_toEndOf="@+id/puzzle15SlideTile10" />
+
+        <Button
+            android:id="@+id/puzzle15SlideTile12"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="slideTile12"
+            android:text="@string/slideTile12"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintBottom_toBottomOf="@+id/puzzle15SlideTile11"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/puzzle15SlideTile13"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="slideTile13"
+            android:text="@string/slideTile13"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puzzle15SlideTile10" />
+
+        <Button
+            android:id="@+id/puzzle15SlideTile14"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="slideTile14"
+            android:text="@string/slideTile14"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintBottom_toBottomOf="@+id/puzzle15SlideTile13"
+            app:layout_constraintEnd_toStartOf="@+id/puzzle15SlideTile15"
+            app:layout_constraintStart_toEndOf="@+id/puzzle15SlideTile13" />
+
+        <Button
+            android:id="@+id/puzzle15SlideTile15"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="slideTile15"
+            android:text="@string/slideTile15"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintBottom_toBottomOf="@+id/puzzle15SlideTile14"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/puzzle15Solver"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/puzzle15GoalState"
+        app:layout_constraintStart_toEndOf="@+id/puzzle15MoveButtons"
+        app:layout_constraintTop_toTopOf="@+id/puzzle15MoveButtons">
+
+        <Button
+            android:id="@+id/puzzle15ResetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="reset"
+            android:text="@string/reset_btn"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/puzzle15NextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:enabled="false"
+            android:onClick="next"
+            android:text="@string/next_btn"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintEnd_toEndOf="@+id/puzzle15SolveButton"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/puzzle15SolveButton"
+            app:layout_constraintTop_toBottomOf="@+id/puzzle15SolveButton" />
+
+        <Button
+            android:id="@+id/puzzle15SolveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle15_btn"
+            android:onClick="solve"
+            android:text="@string/solve_btn"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintEnd_toEndOf="@+id/puzzle15ResetButton"
+            app:layout_constraintStart_toStartOf="@+id/puzzle15ResetButton"
+            app:layout_constraintTop_toBottomOf="@+id/puzzle15ResetButton" />
+
+        <Spinner
+            android:id="@+id/puzzle15BenchmarkChoice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/moves_gray"
+            android:entries="@array/puzzle15Benchmarks"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puzzle15NextButton" />
+
+        <TextView
+            android:id="@+id/puzzle15Stats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:textAppearance="@style/Statistics"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puzzle15BenchmarkChoice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/puzzle15MetaInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/puzzle15MoveButtons"
+        app:layout_constraintEnd_toEndOf="@+id/puzzle15GoalState"
+        app:layout_constraintStart_toStartOf="@+id/puzzle15GoalState"
+        app:layout_constraintTop_toBottomOf="@+id/puzzle15MoveCount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

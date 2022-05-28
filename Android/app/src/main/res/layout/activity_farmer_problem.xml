@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/farmer_bg"
+    tools:context=".activities.FarmerProblemIntro">
+
+    <TextView
+        android:id="@+id/farmerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/farmer_title"
+        android:textAppearance="@style/Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/farmerIntro"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/farmer_intro"
+        android:textAppearance="@style/Heading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/farmerTitle" />
+
+    <TextView
+        android:id="@+id/farmerMessage"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/farmer_message"
+        android:textAppearance="@style/Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/farmerIntro" />
+
+    <Button
+        android:id="@+id/farmerStartBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="@color/farmer_btn"
+        android:onClick="beginProblem"
+        android:text="@string/farmer_start_btn"
+        android:textAppearance="@style/ButtonText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/farmerFinalState" />
+
+    <TextView
+        android:id="@+id/farmerInitialState"
+        android:layout_width="135sp"
+        android:layout_height="135sp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/initial_state"
+        android:gravity="center"
+        android:text="@string/farmer_initial_state"
+        android:textAppearance="@style/MediumMono"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/farmerIntro"
+        app:layout_constraintTop_toBottomOf="@+id/farmerTitle" />
+
+    <TextView
+        android:id="@+id/farmerFinalState"
+        android:layout_width="135sp"
+        android:layout_height="135sp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/final_state"
+        android:gravity="center"
+        android:text="@string/farmer_goal_state"
+        android:textAppearance="@style/MediumMono"
+        app:layout_constraintBottom_toBottomOf="@+id/farmerMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/farmerIntro" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

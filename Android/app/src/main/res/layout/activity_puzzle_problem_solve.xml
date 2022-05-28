@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/puzzle_bg"
+    tools:context=".activities.PuzzleProblemSolve">
+
+    <TextView
+        android:id="@+id/puzzleGoalState"
+        android:layout_width="148sp"
+        android:layout_height="148sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/final_state"
+        android:gravity="center"
+        android:text="@string/puzzle_goal_state"
+        android:textAppearance="@style/MediumMono"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/puzzleCurrentState"
+        android:layout_width="148sp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/initial_state"
+        android:gravity="center"
+        android:text="@string/puzzle_initial_state"
+        android:textAppearance="@style/MediumMono"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/puzzleMovesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="@string/moves_label"
+        android:textAppearance="@style/Heading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/puzzleMoveCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        android:width="50dp"
+        android:height="30dp"
+        android:background="@drawable/moves_count"
+        android:gravity="center"
+        android:text="0"
+        android:textAppearance="@style/MediumMono"
+        app:layout_constraintEnd_toStartOf="@+id/puzzleGoalState"
+        app:layout_constraintStart_toEndOf="@+id/puzzleCurrentState"
+        app:layout_constraintTop_toBottomOf="@+id/puzzleMovesLabel" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/puzzleMoveButtons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/puzzleMoveCount"
+        app:layout_constraintStart_toStartOf="@+id/puzzleCurrentState"
+        app:layout_constraintTop_toBottomOf="@+id/puzzleCurrentState">
+
+        <Button
+            android:id="@+id/puzzleSlideTile1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:backgroundTint="@color/puzzle_btn"
+            android:onClick="slideTile1"
+            android:text="@string/slideTile1"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/puzzleSlideTile2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:backgroundTint="@color/puzzle_btn"
+            android:onClick="slideTile2"
+            android:text="@string/slideTile2"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintBottom_toBottomOf="@+id/puzzleSlideTile1"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/puzzleSlideTile3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@color/puzzle_btn"
+            android:onClick="slideTile3"
+            android:text="@string/slideTile3"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puzzleSlideTile1" />
+
+        <Button
+            android:id="@+id/puzzleSlideTile4"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:backgroundTint="@color/puzzle_btn"
+            android:onClick="slideTile4"
+            android:text="@string/slideTile4"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintBottom_toBottomOf="@+id/puzzleSlideTile3"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/puzzleSlideTile5"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@color/puzzle_btn"
+            android:onClick="slideTile5"
+            android:text="@string/slideTile5"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puzzleSlideTile3" />
+
+        <Button
+            android:id="@+id/puzzleSlideTile6"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:backgroundTint="@color/puzzle_btn"
+            android:onClick="slideTile6"
+            android:text="@string/slideTile6"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintBottom_toBottomOf="@+id/puzzleSlideTile5"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/puzzleSlideTile7"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@color/puzzle_btn"
+            android:onClick="slideTile7"
+            android:text="@string/slideTile7"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puzzleSlideTile5" />
+
+        <Button
+            android:id="@+id/puzzleSlideTile8"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:backgroundTint="@color/puzzle_btn"
+            android:onClick="slideTile8"
+            android:text="@string/slideTile8"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintBottom_toBottomOf="@+id/puzzleSlideTile7"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/puzzleSolver"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/puzzleGoalState"
+        app:layout_constraintStart_toStartOf="@+id/puzzleMoveCount"
+        app:layout_constraintTop_toTopOf="@+id/puzzleMoveButtons">
+
+        <Button
+            android:id="@+id/puzzleResetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            android:backgroundTint="@color/puzzle_btn"
+            android:onClick="reset"
+            android:text="@string/reset_btn"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puzzleMetaInfo" />
+
+        <Button
+            android:id="@+id/puzzleNextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle_btn"
+            android:enabled="false"
+            android:onClick="next"
+            android:text="@string/next_btn"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintEnd_toEndOf="@+id/puzzleSolveButton"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/puzzleSolveButton"
+            app:layout_constraintTop_toBottomOf="@+id/puzzleSolveButton" />
+
+        <Button
+            android:id="@+id/puzzleSolveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/puzzle_btn"
+            android:onClick="solve"
+            android:text="@string/solve_btn"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintEnd_toEndOf="@+id/puzzleResetButton"
+            app:layout_constraintStart_toStartOf="@+id/puzzleResetButton"
+            app:layout_constraintTop_toBottomOf="@+id/puzzleResetButton" />
+
+        <Spinner
+            android:id="@+id/puzzleBenchmarkChoice"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/moves_gray"
+            android:entries="@array/puzzleBenchmarks"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puzzleNextButton" />
+
+        <TextView
+            android:id="@+id/puzzleStats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:textAppearance="@style/Statistics"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puzzleBenchmarkChoice" />
+
+        <TextView
+            android:id="@+id/puzzleMetaInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

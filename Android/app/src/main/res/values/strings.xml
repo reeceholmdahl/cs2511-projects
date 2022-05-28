@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Problem Solver</string>
+    <string name="main_welcome">Welcome to the Problem Solver</string>
+    <string name="choose_problem">Please choose a problem:</string>
+    <string name="farmer_btn">FWGC</string>
+    <string name="puzzle_btn">8-Puzzle</string>
+    <string name="puzzle15_btn">15-Puzzle</string>
+
+    <string name="farmer_title">Welcome to the FWGC Problem</string>
+    <string name="farmer_intro">A farmer and his wolf, goat, and cabbage come to the edge of a river they wish to cross.</string>
+    <string name="farmer_message">There is a boat at the river\'s edge that only the farmer can row. The farmer can take at most one other object besides himself on a crossing, but if the wolf is ever left with the goat, the wolf will eat the goat; similarly, if the goat is left with the cabbage, the goat will eat the cabbage. Devise a sequence of crossings of the river so that all four characters arrive safely on the other side.</string>
+    <string name="farmer_initial_state">|  |\nF |  |&#160;&#160;\nW |  |&#160;&#160;\nG |  |&#160;&#160;\nC |  |&#160;&#160;\n|  |</string>
+    <string name="farmer_goal_state">|  |\n&#160;&#160;|  | F\n&#160;&#160;|  | W\n&#160;&#160;|  | G\n&#160;&#160;|  | C\n|  |</string>
+    <string name="farmer_start_btn">Begin FWGC Problem</string>
+    <string name="goesAlone">Go Alone</string>
+    <string name="takesWolf">Take Wolf</string>
+    <string name="takesGoat">Take Goat</string>
+    <string name="takesCabbage">Take Cabbage</string>
+
+    <string name="puzzle_title">Welcome to the 8-Puzzle Problem</string>
+    <string name="puzzle_intro">You are given a board in which numbered tiles can slide around. There is one blank space that holds no tile. Here is an example:</string>
+    <string name="puzzle_message">A legal move consists of sliding a tile into the blank space if the tile is adjacent to it. The goal is to move tiles around until the board looks like this:</string>
+    <string name="puzzle_initial_state">+---+---+---+\n| 2 | 8 | 3 |\n+---+---+---+\n| 1 | 6 | 4 |\n+---+---+---+\n| 7 |&#160;&#160;&#160;| 5 |\n+---+---+---+</string>
+    <string name="puzzle_goal_state">+---+---+---+\n| 1 | 2 | 3 |\n+---+---+---+\n| 8 |&#160;&#160;&#160;| 4 |\n+---+---+---+\n| 7 | 6 | 5 |\n+---+---+---+</string>
+    <string name="puzzle_start_btn">Begin 8-Puzzle Problem</string>
+    <string name="slideTile1">Slide Tile 1</string>
+    <string name="slideTile2">Slide Tile 2</string>
+    <string name="slideTile3">Slide Tile 3</string>
+    <string name="slideTile4">Slide Tile 4</string>
+    <string name="slideTile5">Slide Tile 5</string>
+    <string name="slideTile6">Slide Tile 6</string>
+    <string name="slideTile7">Slide Tile 7</string>
+    <string name="slideTile8">Slide Tile 8</string>
+    <string-array name="puzzleBenchmarks">
+        <item>8-Puz 1</item>
+        <item>8-Puz 2</item>
+        <item>8-Puz 3</item>
+        <item>8-Puz 4</item>
+        <item>8-Puz 5</item>
+        <item>8-Puz 6</item>
+        <item>8-Puz 7</item>
+        <item>8-Puz 8</item>
+    </string-array>
+
+    <string name="puzzle15_title">Welcome to the 15-Puzzle Problem</string>
+    <string name="puzzle15_initial_state">+---+---+---+---+\n| 5 | 1 | 2 | 3 |\n+---+---+---+---+\n| 6 |&#160;&#160;&#160;| 7 | 4 |\n+---+---+---+---+\n| 9 |10 |11 | 8 |\n+---+---+---+---+\n|13 |14 |15 |12 |\n+---+---+---+---+</string>
+    <string name="puzzle15_goal_state">+---+---+---+---+\n| 1 | 2 | 3 | 4 |\n+---+---+---+---+\n| 5 | 6 | 7 | 8 |\n+---+---+---+---+\n| 9 |10 |11 |12 |\n+---+---+---+---+\n|13 |14 |15 |&#160;&#160;&#160;|\n+---+---+---+---+</string>
+    <string name="puzzle15_start_btn">Begin 15-Puzzle Problem</string>
+    <string name="slideTile9">Slide Tile 9</string>
+    <string name="slideTile10">Slide Tile 10</string>
+    <string name="slideTile11">Slide Tile 11</string>
+    <string name="slideTile12">Slide Tile 12</string>
+    <string name="slideTile13">Slide Tile 13</string>
+    <string name="slideTile14">Slide Tile 14</string>
+    <string name="slideTile15">Slide Tile 15</string>
+    <string-array name="puzzle15Benchmarks">
+        <item>15-Puz 1</item>
+        <item>15-Puz 2</item>
+        <item>15-Puz 3</item>
+        <item>15-Puz 4</item>
+        <item>15-Puz 5</item>
+        <item>15-Puz 6</item>
+        <item>15-Puz 7</item>
+        <item>15-Puz 8</item>
+    </string-array>
+
+    <string name="moves_label">Moves</string>
+    <string name="reset_btn">Reset</string>
+    <string name="solve_btn">Solve</string>
+    <string name="next_btn">Next</string>
+</resources>

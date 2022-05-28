@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/rholm/AndroidStudioProjects/MyFirstApp/app/src/main/res/layout/activity_farmer_problem.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/rholm/AndroidStudioProjects/MyFirstApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/rholm/AndroidStudioProjects/MyFirstApp/app/src/main/res/layout/activity_puzzle_problem.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/rholm/AndroidStudioProjects/MyFirstApp/app/src/main/res/layout/farmer_problem.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/rholm/AndroidStudioProjects/MyFirstApp/app/src/main/res/layout/puzzle_problem.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/rholm/Box/College/Fall2021/CS2511/Labs/Android/app/src/main/res/drawable/border.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/rholm/Box/College/Fall2021/CS2511/Labs/Android/app/src/main/res/drawable/final_state.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/rholm/Box/College/Fall2021/CS2511/Labs/Android/app/src/main/res/drawable/initial_state.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/rholm/Box/College/Fall2021/CS2511/Labs/Android/app/src/main/res/drawable/moves_count.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/rholm/Box/College/Fall2021/CS2511/Labs/Android/app/src/main/res/layout/activity_farmer_problem.xml" value="0.25" />
+        <entry key="..\:/Users/rholm/Box/College/Fall2021/CS2511/Labs/Android/app/src/main/res/layout/activity_farmer_problem_solve.xml" value="0.25" />
+        <entry key="..\:/Users/rholm/Box/College/Fall2021/CS2511/Labs/Android/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/rholm/Box/College/Fall2021/CS2511/Labs/Android/app/src/main/res/layout/activity_puzzle15_problem.xml" value="0.25" />
+        <entry key="..\:/Users/rholm/Box/College/Fall2021/CS2511/Labs/Android/app/src/main/res/layout/activity_puzzle15_problem_solve.xml" value="0.4" />
+        <entry key="..\:/Users/rholm/Box/College/Fall2021/CS2511/Labs/Android/app/src/main/res/layout/activity_puzzle_problem.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/rholm/Box/College/Fall2021/CS2511/Labs/Android/app/src/main/res/layout/activity_puzzle_problem_solve.xml" value="0.23796296296296296" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

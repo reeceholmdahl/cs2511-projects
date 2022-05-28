@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/farmer_bg"
+    tools:context=".activities.FarmerProblemSolve">
+
+    <TextView
+        android:id="@+id/farmerGoalState"
+        android:layout_width="135sp"
+        android:layout_height="135sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/final_state"
+        android:gravity="center"
+        android:text="@string/farmer_goal_state"
+        android:textAppearance="@style/MediumMono"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/farmerCurrentState"
+        android:layout_width="135sp"
+        android:layout_height="135sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/initial_state"
+        android:gravity="center"
+        android:text="@string/farmer_initial_state"
+        android:textAppearance="@style/MediumMono"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/farmerMovesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="@string/moves_label"
+        android:textAppearance="@style/Heading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/farmerMoveCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="1dp"
+        android:width="50dp"
+        android:height="30dp"
+        android:background="@drawable/moves_count"
+        android:gravity="center"
+        android:text="0"
+        android:textAppearance="@style/MediumMono"
+        app:layout_constraintEnd_toStartOf="@+id/farmerGoalState"
+        app:layout_constraintStart_toEndOf="@+id/farmerCurrentState"
+        app:layout_constraintTop_toBottomOf="@+id/farmerMovesLabel" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/farmerMoveButtons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/farmerMoveCount"
+        app:layout_constraintStart_toStartOf="@+id/farmerCurrentState"
+        app:layout_constraintTop_toBottomOf="@+id/farmerCurrentState">
+
+        <Button
+            android:id="@+id/farmerGoesAlone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/farmer_btn"
+            android:onClick="goesAlone"
+            android:text="@string/goesAlone"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/farmerTakesWolf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/farmer_btn"
+            android:onClick="takesWolf"
+            android:text="@string/takesWolf"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/farmerGoesAlone" />
+
+        <Button
+            android:id="@+id/farmerTakesGoat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/farmer_btn"
+            android:onClick="takesGoat"
+            android:text="@string/takesGoat"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/farmerTakesWolf" />
+
+        <Button
+            android:id="@+id/farmerTakesCabbage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/farmer_btn"
+            android:onClick="takesCabbage"
+            android:text="@string/takesCabbage"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/farmerTakesGoat" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/farmerSolver"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/farmerGoalState"
+        app:layout_constraintStart_toStartOf="@+id/farmerMoveCount"
+        app:layout_constraintTop_toTopOf="@+id/farmerMoveButtons">
+
+        <Button
+            android:id="@+id/farmerResetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            android:backgroundTint="@color/farmer_btn"
+            android:onClick="reset"
+            android:text="@string/reset_btn"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/farmerMetaInfo" />
+
+        <Button
+            android:id="@+id/farmerNextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/farmer_btn"
+            android:enabled="false"
+            android:onClick="next"
+            android:text="@string/next_btn"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintEnd_toEndOf="@+id/farmerSolveButton"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/farmerSolveButton"
+            app:layout_constraintTop_toBottomOf="@+id/farmerSolveButton" />
+
+        <Button
+            android:id="@+id/farmerSolveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/farmer_btn"
+            android:onClick="solve"
+            android:text="@string/solve_btn"
+            android:textAppearance="@style/ButtonText"
+            app:layout_constraintEnd_toEndOf="@+id/farmerResetButton"
+            app:layout_constraintStart_toStartOf="@+id/farmerResetButton"
+            app:layout_constraintTop_toBottomOf="@+id/farmerResetButton" />
+
+        <TextView
+            android:id="@+id/farmerStats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:textAppearance="@style/Statistics"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/farmerNextButton" />
+
+        <TextView
+            android:id="@+id/farmerMetaInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
